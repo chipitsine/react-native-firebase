@@ -64,11 +64,6 @@ jobs:
           max_attempts: 3
           command: yarn && yarn lerna:prepare
 
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3
-
       - name: Update Ruby build tools
         uses: nick-fields/retry@v2
         with:
