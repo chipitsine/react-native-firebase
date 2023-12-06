@@ -98,13 +98,13 @@ jobs:
       - name: Start Firestore Emulator
         run: yarn tests:emulator:start-ci
 
-      - name: Install brew utilities
-        uses: nick-fields/retry@v2
-        with:
-          timeout_minutes: 5
-          retry_wait_seconds: 60
-          max_attempts: 3
-          command: HOMEBREW_NO_AUTO_UPDATE=1 brew tap wix/brew && HOMEBREW_NO_AUTO_UPDATE=1 brew install applesimutils xcbeautify
+#      - name: Install brew utilities
+#        uses: nick-fields/retry@v2
+#        with:
+#          timeout_minutes: 5
+#          retry_wait_seconds: 60
+#          max_attempts: 3
+#          command: HOMEBREW_NO_AUTO_UPDATE=1 brew tap wix/brew && HOMEBREW_NO_AUTO_UPDATE=1 brew install applesimutils xcbeautify
 
       - name: Build iOS App
         run: |
